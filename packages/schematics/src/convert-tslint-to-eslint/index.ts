@@ -461,11 +461,11 @@ function ensureESLintPluginsAreInstalled(
 
     if (pluginsToInstall.length > 0) {
       context.logger.info(
-        '\nTo most closely match your tslint.json, the `latest` version of following eslint plugins have been installed:',
+        '\nINFO: To most closely match your tslint.json, the `latest` version of the following eslint plugin(s) have been installed:',
       );
       context.logger.warn('\n  - ' + pluginsToInstall.join('\n  - '));
       context.logger.warn(
-        '\nNOTE: You may wish to pin these to a specific version number in your package.json, rather than leaving it open to `latest`.\n',
+        '\nPlease note, you may wish to pin these to a specific version number in your package.json, rather than leaving it open to `latest`.\n',
       );
 
       host.overwrite('package.json', JSON.stringify(json, null, 2));
